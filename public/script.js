@@ -49,13 +49,16 @@ function submitData(e) {
     redirect: "follow"
   };
 
-  fetch('http://localhost:3000/summarize', requestOptions)
-  .then(response => response.text()) // Response will be summarized text
-  .then(summary => {
+  fetch('/api/summarize', requestOptions)
+  .then(response => response.json()) // Response will be summarized text
+  .then(data => {
+  // .then(summary => {
     // Do something with the summary response from the back end API!
 
     // Update the output text area with new summary
-    summarizedTextArea.value = summary;
+    // summarizedTextArea.value = summary;
+    summarizedTextArea.value = data.summary_text;
+
 
     // Stop the spinning loading animation
     submitButton.classList.remove("submit-button--loading");
