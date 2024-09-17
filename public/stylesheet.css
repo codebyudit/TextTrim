@@ -3,6 +3,12 @@
   padding: 40px;
 }
 
+.hero-image{
+  /* width: 100%; */
+  height: auto;
+  width: auto;
+}
+
 .cta-content {
   justify-content: center;
   display: flex;
@@ -49,17 +55,44 @@ img {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: aquamarine;
-  padding: 20px;
-  text-align: center
+  background-color: white;
+  /* padding: 20px; */
+  text-align: center;
+  margin: auto;
+  
 }
 
 h1 {
   text-align: center;
   font-weight: bold;
-  color: #333;
+  color: black;
   margin-bottom: 30px;
   font-size: 32px;
+  font-family: Georgia, serif;
+
+}
+
+h2{
+  /* text-align: center; */
+  width: auto;
+  height: auto;
+  font-weight: 0;
+  font-family: Georgia, serif;
+  color:aliceblue;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+h3{
+  font-weight: 0;
+  font-family: Georgia, serif;
+  color:black;
+  /* margin-bottom: 30px; */
+  font-size: 18px;
+}
+
+.heading2{
+  margin: 0 50px 0 50px;
 }
 
 p {
@@ -74,6 +107,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  /* margin-bottom: -10px; */
   padding: 20px;
 }
 
@@ -147,11 +181,7 @@ textarea {
     animation: button-loading-spinner 1s ease infinite;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-}
+
 
 @keyframes button-loading-spinner {
     from {
@@ -161,4 +191,25 @@ textarea {
     to {
         transform: rotate(1turn);
     }
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706, #8A2BE2,  #FF1493, #00CED1);
+    background-size: 1000% 100%;
+    animation: gradient 50s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }

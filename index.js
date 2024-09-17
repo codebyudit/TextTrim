@@ -1,6 +1,19 @@
+const dotenv = require('dotenv');
+const cors = require('cors');
+
 const express = require('express');
 const app = express();
 const port = 3000;
+dotenv.config();
+// app.use(express.json());
+
+
+app.use(cors());
+// app.use(cors({
+//   origin: "",
+//   credentials: true
+// }));
+
 const summarizeText = require('./summarize.js');
 
 // Parses JSON bodies (as sent by API clients)
@@ -9,6 +22,7 @@ app.use(express.json());
 // Serves static files from the 'public' directory
 app.use(express.static('public'));
 // Handle POST requests to the '/summarize' endpoint
+
 
 app.post('/summarize', (req, res) => {
  // get the text_to_summarize property from the request body

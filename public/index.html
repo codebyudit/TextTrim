@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="stylesheet.css">   
   </head>
   <body>
-    <h1>AI Text Summarizer App</h1>
-    <p> Welcome to the AI Text Summarizer App! This app leverages the power of Artificial Intelligence APIs to provide concise summaries of long texts. Whether you have a lengthy article, research paper, or any other text document that you want to summarize quickly, our app can assist you. </p>
-    <p> Simply paste your text into the text area below and click the "Submit" button. </p>
+    <div class="wrapper">
+      <img src="images/logo.png" alt="Hero Image" class="hero-image">
+    <!-- <h1>TextTrim : AI Text Summarizer</h1> -->
+    <h1> Welcome to texTrim!</h1>
+    <div class="heading2">
+      <h2>
+        This app leverages the power of Artificial Intelligence APIs to provide concise summaries of long texts. Whether you have a lengthy article, research paper, or any other text document that you want to summarize quickly, our app can assist you.
+      </h2>
+    </div>
+    <h3> Simply paste your text into the text area below and click the "Submit" button. </h3>
     <div class="container">
       <div class="text-box">
         <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000"></textarea>
@@ -22,7 +29,7 @@
       <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"> </textarea>
       </div>
     </div>
-    <section class="cta-section">
+    <!-- <section class="cta-section">
       <div class="cta-content">
         <div class="cta-text">
         <h2>Curious how to build this app?</h2>
@@ -31,7 +38,9 @@
         </div>
         <img src="images/learning.png"></img>
       </div>
-    </section>
+    </section> -->
     <script src="script.js"></script>
+    </div>
+    
   </body>
 </html>
